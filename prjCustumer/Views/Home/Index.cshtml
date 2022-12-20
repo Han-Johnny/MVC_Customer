@@ -1,0 +1,45 @@
+﻿@model IEnumerable<prjCustumer.Models.tCustomer>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.fName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fPhone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fEmail)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.fName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fPhone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fEmail)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { fid=item.fId }) |
+            @Html.ActionLink("Details", "Details", new { fid=item.fId }) |
+            @Html.ActionLink("Delete", "Delete", new { fid=item.fId })
+        </td>
+    </tr>
+}
+
+</table>
