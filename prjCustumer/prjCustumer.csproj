@@ -100,6 +100,8 @@
     <Content Include="App_Data\dbCustomer_log.ldf">
       <DependentUpon>dbCustomer.mdf</DependentUpon>
     </Content>
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
     <Content Include="Global.asax" />
     <Content Include="Models\dbCustomerModel.Context.tt">
